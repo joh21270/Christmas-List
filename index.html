@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidneys Christmas List</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/miw8ian.css">
+
+</head>
+<body>
+
+<header>
+<nav> 
+    <a href="index.html" class="active">Home</a>
+    <a href="clothing.html">Clothing</a>
+    <a href="apartment.html">Apartment</a>
+    <a href="beauty.html">Beauty</a>
+    <a href="other.html">Other</a>
+</nav>
+</header>
+
+<div class="container-title">
+    <div class=slide>
+        <img class="slides" src="images/101_0002.JPG">
+        <img class="slides" src="images/101_0011.JPG">
+        <img class="slides" src="images/101_0032.JPG">
+        <img class="slides" src="images/DSC_3609.JPG">
+        <img class="slides" src="images/DSC_3615.JPG">
+        <img class="slides" src="images/DSC_3626.JPG">
+        <img class="slides" src="images/DSC_3628.JPG">
+    </div>
+    <div class="centered">SIDNEYS CHRISTMAS LIST 2023</div>
+</div>
+
+
+<section class="catagory-list">
+    <article class="catagory">
+        <a href="clothing.html">
+            <p>Clothing</p>
+            <img class="catagory-image" src="images/sweater.png" alt="Clothing">
+        </a>
+    </article>
+    <article class="catagory">
+        <a href="apartment.html">
+            <p>Apartment</p>
+            <img class="catagory-image" src="images/house.png" alt="Apartment">
+        </a>
+    </article>
+    <article class="catagory">
+        <a href="beauty.html">
+            <p>Beauty</p>
+            <img class="catagory-image" src="images/tree.png" alt="Beauty">
+        </a>
+    </article>
+    <article class="catagory">
+        <a href="other.html">
+            <p>Other</p>
+            <img class="catagory-image" src="images/deer.png" alt="Other">
+        </a>
+    </article>
+  </section>
+
+<script>
+    //(change to pics of family)
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("slides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 8000);
+    }
+ </script>
+
+<footer>
+    <p>SLJ</p>
+</footer>
+</body>
+</html>
